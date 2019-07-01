@@ -1,0 +1,58 @@
+set serveroutput on
+set arraysize 1
+col output for a210
+
+select output from table( pipe_ostat.pipe_xdiff(' with s as (select name,value from v$sysstat )
+select name	, decode(name
+,''user commits''			,''UsrCmt''
+,''user rollbacks''			,''UsrRlbk''
+,''transaction rollbacks''		,''TxRlbk''
+,''rollback changes - undo records applied'',''RlbkChgUndoRec''
+,''commit batch requested''		,''CmtBatchReq''
+,''commit immediate requested''		,''CmtImmedReq''
+,''commit batch performed''		,''CmtBatPerf''
+,''commit immediate performed''		,''CmtImmedPerf''
+,''commit nowait requested''		,''CmtNowaitReq''
+,''commit wait requested''		,''CmtWaitReq''
+,''commit nowait performed''		,''CmtNowaitPerf''
+,''commit wait performed''		,''CmtWaitPerf''
+,''redo entries''			,''RedoEnt''
+,''redo size''				,''RedoSize''
+,''redo wastage''			,''RedoWastage''
+,''redo writes''			,''RedoWrt''
+,''redo blocks written''		,''RedoBlkWrt''
+,''redo write time (usec)''		,''RedoWrtUsec''
+,''redo log space requests''		,''RedoLogSpaceReq''
+,''redo log space wait time''		,''RedoLogSpWaitTM''
+,''redo synch time (usec)''		,''RedoSyncUsec''
+,''redo synch writes''			,''RedoSyncWrt''
+,''redo KB read''			,''RedoKBRd''
+,''redo KB read (memory)''		,''RedoKBRdMem''
+,name) display_name	,value	,''YES'' show	,''YES'' cumulative	,'''' formula	
+from s where s.name in (
+''user commits''               
+,''user rollbacks''             
+,''transaction rollbacks''      
+,''commit batch requested''     
+,''commit immediate requested'' 
+,''commit batch performed''     
+,''commit immediate performed'' 
+,''commit nowait requested''    
+,''commit wait requested''      
+,''commit nowait performed''    
+,''commit wait performed''      
+,''redo entries''               
+,''redo size''                  
+,''redo wastage''               
+,''redo writes''                
+,''redo blocks written''        
+,''redo write time (usec)''     
+,''redo log space requests''    
+,''redo log space wait time''   
+,''redo synch time (usec)''     
+,''redo synch writes''          
+,''redo KB read''               
+,''redo KB read (memory)''      
+,''rollback changes - undo records applied''
+)',sample_cnt=>10000 ,SAMPLE_INTERVAL=>&1 ,column_width=>7 ,debug=>0)); 
+--',sample_cnt=>99999 ,SAMPLE_INTERVAL=>1 ,column_width=>8 ,debug=>0));  
