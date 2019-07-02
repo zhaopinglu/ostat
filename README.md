@@ -7,15 +7,15 @@ Example:
 ![alt text](screenshots/ostat.png)
 
 
-**1. Installation**
+#**1. Installation**
 Use sqlplus to connection to a database with sys user. Then run 
 @ostat/pipe_ostat
 
 Done.
 
-**2. Run ostat script to get the 'almost' real time performance metrics output.**
+#**2. Run ostat script to get the 'almost' real time performance metrics output.**
 
-**Example 1: Query CPU usage with script ostat_cpu.sql**
+##**Example 1: Query CPU usage with script ostat_cpu.sql**
 
 ```
 SYS@XXX/ORCLCDB (OPEN) > @ostat_cpu 1
