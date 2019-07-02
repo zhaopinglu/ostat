@@ -17,7 +17,7 @@ Done.
 
 Example 1: Query CPU usage with script ostat_cpu.sql
 
-
+```
 SYS@XXX/ORCLCDB (OPEN) > @ostat_cpu 1
 -- Author: zhaopinglu77@gmail.com, Created: 20110904. Last Update: 20170224
 -- Note: 1, Use Ctrl-C to break the execution. 2, The unit in output values: k = 1000, m = 1000k, etc.
@@ -37,3 +37,4 @@ SYS@XXX/ORCLCDB (OPEN) > @ostat_cpu 1
 02:48:01           .4            0            0         99.9            0            0            0            0         14.5
 02:48:03           .4            0            0          100            0            0            0            0         17.6
 02:48:05           .4            0            0          100            0            0            0            0         34.6
+```
