@@ -15,7 +15,7 @@ Done.
 
 
 
-# **2. Run ostat script to get the 'almost' real time performance metrics output.**
+# **2. Run ostat script to get the 'almost real time' performance metrics output.**
 The followings are some quick examples.
 
 
