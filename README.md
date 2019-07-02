@@ -87,3 +87,33 @@ As we can see from above output. The literal sql caused some changes:
 2) The library cache hit ratio dropped from 100% to 33.8%
 3) The dbcpu(ms) also increased.
 
+
+
+## **Example 3: Monitor db network traffic stats with ostat_net.sql**
+
+### In session 1, run below sql to fetch a large amount of data
+```
+set autot trace   -- optional, to suppress the screen output
+select text from dba_views;
+```
+
+### In session 2, run ostat_net.sql
+```
+SYS@XXX/ORCLCDB (OPEN) > @ostat_net 1
+-- Author: zhaopinglu77@gmail.com, Created: 20110904. Last Update: 20170224
+-- Note: 1, Use Ctrl-C to break the execution. 2, The unit in output values: k = 1000, m = 1000k, etc.
+
+         ToCln     |FromCln   |RndTripTo/|ToDBL     |FromDBL   |RndTripTo/|VecToCln  |VecFromCln|VecToDBL  |VecFromDBL|FromCln/RT|ToCln/RT  |
+                   |          |FromCln   |          |          |FromDBL   |          |          |          |          |          |          |
+---------------------------------------------------------------------------------------------------------------------------------------------
+03:39:54        477         11          1          0          0          0          0          0          0          0         11        477
+03:39:55        471         11          1          0          0          0          0          0          0          0         11        471
+03:39:57          1          0          0          0          0          0          0          0          0          0          -          -
+03:39:58        471         11          1          0          0          0          0          0          0          0         11        471
+03:39:59      19.4k       1.1k         10          0          0          0          0          0          0          0      109.3       1.9k
+03:40:00       273k      11.1k         1k          0          0          0          0          0          0          0         11        270
+03:40:01       289k      16.6k       1.5k          0          0          0          0          0          0          0         11      191.9
+03:40:03       278k      15.9k       1.4k          0          0          0          0          0          0          0         11      192.2
+03:40:04       281k      16.1k       1.5k          0          0          0          0          0          0          0         11      192.1
+03:40:05       327k      18.7k       1.7k          0          0          0          0          0          0          0         11      192.2
+```
