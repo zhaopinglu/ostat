@@ -82,4 +82,4 @@ SYS@XXX/ORCLCDB (OPEN) > @ostat 1
 03:01:22  97.2   2.3  2.3k     0     0     0     0     0     2     0     0     0     0     0     3     0     0     0     0  1.4k  1.5k   100     0   100  33.8     -   100    .8  49.5     0     0  1.4k     0
 ```
 
-**As we can see from above output. The literal sql caused lots of hard parses (1.4k/s) and seriously impact the library cache hit ratio (33.8%).
+**As we can see from above output. The literal sql caused lots of hard parses (1.4k/s) and seriously impacted the library cache hit ratio (dropped from 100% to 33.8%).
