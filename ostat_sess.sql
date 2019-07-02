@@ -37,7 +37,7 @@ set feed on serveroutput on arraysize 1 verify off
   i.e.:
     col output format a170
     set arraysize 1
-    --exec DBMS_DEBUG_JDWP.CONNECT_TCP( 'slc04ljq.us.oracle.com', 4000 );
+    --exec DBMS_DEBUG_JDWP.CONNECT_TCP( 'your_host_ip', 4000 );
 
     case 1:
     select * from table( pipe_ostat.pipe_xdiff('

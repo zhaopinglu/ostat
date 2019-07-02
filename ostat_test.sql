@@ -23,7 +23,7 @@ col output format a200
 set arraysize 1
 
 /*
---exec DBMS_DEBUG_JDWP.CONNECT_TCP( 'slc04ljq.us.oracle.com', 4000 );
+--exec DBMS_DEBUG_JDWP.CONNECT_TCP( 'your_host_ip', 4000 );
 
 --value in v$sys_time_model: us; in v$sysstat: cs
 --
