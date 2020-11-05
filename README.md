@@ -1,7 +1,7 @@
 # Ostat
 Oracle Database Real Time Performance Monitoring Tool.
 
-Author: Zhaoping Lu (zhaopinglu77@gmail.com)
+Author: Zhaoping Lu (zhaopinglu77 at gmail.com)
 
 Example:
 ![alt text](screenshots/ostat.png)
