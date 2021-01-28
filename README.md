@@ -117,4 +117,10 @@ SYS@XXX/ORCLCDB (OPEN) > @ostat_net 1
 03:48:01          1          0          0          0          0          0          0          0          0          0          -          -
 ```
 
+
+Real cases
+
+https://github.com/zhaopinglu/ostat/blob/master/ostat_case_1
+
+
 \<TBD\>
