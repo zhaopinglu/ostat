@@ -1,5 +1,5 @@
 
-Last night, I used "ostat" tool to monitor the database status during migrating a 10M rows table in 48 parallel streams. The following is the ostat output:
+In a recent customer support, I used "ostat" tool to monitor the database status during migrating a 10M+ rows table in 48 parallel streams. The following is the ostat output:
 
 ```
 SYS@xxxdb1 (OPEN) > @ostat 2
