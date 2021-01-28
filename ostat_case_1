@@ -20,4 +20,4 @@ SYS@xxxdb1 (OPEN) > @ostat 2
 00:31:13  36.4  59.9 34.3k  126k     2  20.3     0    12  1.5m 677.1     0  1.5k  2.2k 51.2k  842k 99.6k 263.6  73.2     2     2    26  99.6     0    99  99.6     0   100  92.3  99.6  108k 65.2k  255k     0
 ```
 
-You can see many key metrics in one glance in real time. Cool!!!
+You can see many real-time key metrics at a quick glance. Cool!!!
